@@ -1,5 +1,7 @@
 # Zimmerer_CSCI2270_FinalProject
-README for Final Project for CSCI2270
+Final Project for CSCI2270
+
+*****README*****
 This program contains a class and a executable file to build a
 deck of cards and play different games with. The deck contains
 all 13 unique cards in each of the four suits. There are shuffle
