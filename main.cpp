@@ -3,47 +3,55 @@
   CSCI 2270-Final Project
   Start Date: 4-16-15*/
 /*
-  It errors saying undefined reference to Deck, very confused
+  I think that the undefined refference error was from the destructor 
+  not being present in the deck.cpp, I got a similar error and that fixed it
 */
 
-#include <vector>
 #include <iostream>
 #include "Deck.h"
+
 using namespace std;
 
-string displayMenu();
-
-int main()
-{
-    string command = "";
-
-    //initialize the main deck
-    Deck mainDeck;
-    mainDeck.resetDeck();
-
-    while(command != "5")
-    {
-        if(command == "1")
-        {
-            mainDeck.resetDeck();
-        }
-
-        command = displayMenu();
-    }
-
-    cout << "Goodbye!" << endl;
-    return 0;
-}
-
-string displayMenu()
-{
-    string input;
-    cout << "=== Main Menu ===" << endl;
-    cout << "1. Reset Deck" << endl;
-    cout << "2. Print Deck" << endl;
-    cout << "3. Shuffle Deck" << endl;
-    cout << "4. Deal Deck" << endl;
-    cout << "5. Quit" << endl;
-    getline(cin, input);
-    return input;
+int main(){
+	Deck d;
+	
+	int choice = 0;
+	
+	do{
+		cout<<"=====Main Menu====="<<endl;
+		cout<<"1. Print Deck"<<endl;
+		cout<<"2. Reset Deck"<<endl;
+		cout<<"3. Shuffle Deck"<<endl;
+		cout<<"4. Deal Deck"<<endl;
+		cout<<"5. Play War"<<endl;
+		cout<<"6. Quit"<<endl;
+		cin>>choice;
+		cin.sync();
+		
+		if(choice==1){
+			cout<<endl;
+			d.printDeck();
+			cout<<endl;
+		}
+		else if(choice==2){
+			d.resetDeck();
+		}
+		else if(choice==3){
+			d.shuffle();
+		}
+		else if(choice==4){
+			int num;
+			cout<<"How many cards would you like to deal: ";
+			cin>>num;
+			cin.sync();
+			cout<<endl;
+			d.deal(num);
+			cout<<endl;
+		}
+		else if(choice==5){
+			
+		}
+	}
+	while(choice!=6);
+	return 0;
 }
