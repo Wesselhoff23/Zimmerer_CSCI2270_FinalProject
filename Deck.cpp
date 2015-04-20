@@ -9,10 +9,10 @@ using namespace std;
 Deck::Deck(){								//initialize 52 card deck
 	string suit;
 	for(int s = 0; s < 4; s++){				//Assigns suits as follows
-		if     (s == 0)	suit = "Club";
-		else if(s == 1)	suit = "Diamond";
-		else if(s == 2)	suit = "Heart";
-		else 			suit = "Spade";
+		if     (s == 0)	suit = "Spade";
+		else if(s == 1)	suit = "Heart";
+		else if(s == 2)	suit = "Diamond";
+		else 			suit = "Club";
 		
 		for(int r = 2; r < 15; r++){		//jack-11, queen-12, king-13, ace-14
 			Card temp;
