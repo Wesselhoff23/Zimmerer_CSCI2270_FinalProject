@@ -1,8 +1,7 @@
-#include <iostream>
-#include <vector>
 #ifndef DECK_H
 #define DECK_H
-
+#include <iostream>
+#include <vector>
 
 struct Card{
 	std::string suit;	//Club first, Diamond second, Heart third, Spade last -- ORDER MATTERS
@@ -25,7 +24,7 @@ class Deck
 		void printDeck();
 		void resetDeck();
 		void shuffle();
-		void deal();
+		void deal(int);
 	private:
 		std::vector<Card> deck;
 };
