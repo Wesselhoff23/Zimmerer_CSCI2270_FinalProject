@@ -72,15 +72,23 @@ Jake Mitchell
 
 *****Enhancement Requests*****
 -Poker function
-	A Texas Hold'em function to run a game of texas hold'em. If
-	one manages to write a working A.I. to play against, I would 
-	be impressed.
+	Rather ambitious function, but a functioning Texas Hold'em function
+	which keeps track of currency, properly jugdes winning hands, and 
+	can be played vs the computer would be very impressive.
 
 -Blackjack Function
-	Does not need to keep track of money/chips, just a one-hand-at-
-	a-time would be fine. Would be fun to be able to play more than
-	one, however, and add in card-counting functionality.
+	Does not need to keep track of money/chips, although that would be 
+	cool, just a one-hand-at-a-time would be fine. Would be fun to be
+	able to play more than one, however, and add in card-counting
+	functionality.
 
+<<<<<<< HEAD
 
+=======
+- War Function
+	A user vs. computer game of War.  Each player will have one deck of
+	cards likely implemented as a queue.  Possibly 	another function
+	to auto-complete the game and display the winner.
+>>>>>>> a9ddd58a71bec8a7bf35e6f5e5cfe121bbc9d249
 
 *****Bugs*****
