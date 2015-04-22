@@ -6,9 +6,9 @@
 struct Card{
 	std::string suit;	//Club first, Diamond second, Heart third, Spade last -- ORDER MATTERS
 	int rank;
-	
+
 	Card(){}
-	
+
 	Card(std::string s, int r){
 		suit = s;
 		rank = r;
@@ -24,8 +24,9 @@ class Deck
 		void printDeck();
 		void resetDeck();
 		void shuffle();
-		void deal(int);
+		void dealX(int);
 	private:
+	    Card deal();
 		std::vector<Card> deck;
 };
 
