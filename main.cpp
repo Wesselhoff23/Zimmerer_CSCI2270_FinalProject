@@ -13,14 +13,14 @@ string displayMenu(int menuNum);
 
 int main(){
 	Deck d;
-	
+
 	string choice = "0";
 	int menu = 1;
 	bool quit = false;
-	
+
 	do{
 		choice = displayMenu(menu);
-		
+
 		if(menu == 1){
 			if(choice=="1"){
 				cout<<endl;
@@ -52,13 +52,15 @@ int main(){
 				cout << "Please enter a valid input 1-6" << endl;
 			}
 		}
-		
+
 		else if(menu == 2){
 			if(choice == "1"){
 				//play blackjack
+				cout << "Play Blackjack here" << endl;
 			}
 			else if(choice == "2"){
 				//play war
+				cout << "Play war here" << endl;
 			}
 			else if(choice == "3"){
 				menu = 1;
@@ -73,8 +75,8 @@ int main(){
 	}
 	while(!quit);
 	return 0;
-}	
-	
+}
+
 string displayMenu(int menuNum){
 	if(menuNum == 1){ //Main menu
 		cout<<"=====Main Menu====="<<endl;
