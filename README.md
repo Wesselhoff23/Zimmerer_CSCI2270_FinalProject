@@ -92,3 +92,5 @@ Jake Mitchell
 >>>>>>> a9ddd58a71bec8a7bf35e6f5e5cfe121bbc9d249
 
 *****Bugs*****
+- In main, deal will error out if called when deck is empty
+- Shuffle always shuffles the same way, it isnt random
