@@ -5,18 +5,30 @@
   4-24-15
 */
 
-#IFNDEF WAR_H
-#DEFINE WAR_H
+#ifndef WAR_H
+#define WAR_H
 #include <iostream>
 #include <vector>
-#inlcude "Deck.h"
+#include "Deck.h"
+#include <queue>
 
-class War::Deck
+class War : public Deck
 {
     public:
         War();
         ~War();
+        void playRound();
+        int gameOver();
+        void resetGame();
+        int cardCompare(Card pC, Card cC);
+        int play();
+        std::string menu();
+        int playerCardsLeft();
+        int compCardsLeft();
+        bool playWar(Card pCard, Card cCard);
     private:
+        std::queue<Card> playerQueue;
+        std::queue<Card> compQueue;
 };
 
 
