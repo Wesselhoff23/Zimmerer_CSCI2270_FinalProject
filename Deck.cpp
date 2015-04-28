@@ -160,3 +160,8 @@ Card Deck::deal(){
     deck.pop_back();
     return temp;
 }
+
+int Deck::numCardsLeft()
+{
+    return deck.size();
+}

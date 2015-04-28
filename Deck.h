@@ -25,7 +25,8 @@ class Deck
 		void resetDeck();
 		void shuffle();
 		void dealX(int);
-	private:
+		int numCardsLeft();
+	protected:
 	    Card deal();
 		std::vector<Card> deck;
 };
