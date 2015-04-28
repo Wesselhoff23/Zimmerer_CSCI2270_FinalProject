@@ -5,7 +5,9 @@
   4-20-15
 */
 #include <iostream>
+#include <sstream>
 #include "Deck.h"
+#include "War.h"
 
 using namespace std;
 
@@ -34,13 +36,34 @@ int main(){
 				d.shuffle();
 			}
 			else if(choice=="4"){
-				int num;
+				string numStr;
 				cout<<"How many cards would you like to deal: ";
-				cin>>num;
-				cin.sync();
-				cout<<endl;
-				d.deal(num);
-				cout<<endl;
+				getline(cin, numStr);
+				stringstream ss;
+				ss << numStr;
+				int num;
+				ss >> num;
+				if(!ss.fail())
+                {
+                    int cardsLeft = d.numCardsLeft();
+                    if(num > cardsLeft)
+                    {
+                        cout << "Only " << cardsLeft << " cards left in deck." << endl;
+                        cout << endl;
+                        d.dealX(cardsLeft);
+                        cout << endl;
+                    }
+                    else
+                    {
+                        cout << endl;
+                        d.dealX(num);
+                        cout << endl;
+                    }
+                }
+                else
+                {
+                    cout << "Please enter an integer 1-52" << endl;
+                }
 			}
 			else if(choice=="5"){
 				menu = 2;
@@ -60,7 +83,8 @@ int main(){
 			}
 			else if(choice == "2"){
 				//play war
-				cout << "Play war here" << endl;
+				War warGame;
+				int success = warGame.play();
 			}
 			else if(choice == "3"){
 				menu = 1;
