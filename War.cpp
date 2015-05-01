@@ -281,7 +281,7 @@ bool War::playWar(Card pCard, Card cCard)
             printCard(pCards[i]);
             playerQueue.push(pCards[i]);
         }
-        playerQueue.push(pCards[4]);
+        playerQueue.push(pCards[3]);
         cout << "Computers's 3 down cards" << endl;
         for(int i = 0; i < 3; i++)
         {
