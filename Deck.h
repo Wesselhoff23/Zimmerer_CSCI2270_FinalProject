@@ -24,6 +24,7 @@ class Deck
 		void printDeck();
 		void resetDeck();
 		void shuffle();
+		void randomShuffle();
 		void dealX(int);
 		int numCardsLeft();
 	protected:
