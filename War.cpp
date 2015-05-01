@@ -288,7 +288,7 @@ bool War::playWar(Card pCard, Card cCard)
             printCard(cCards[i]);
             playerQueue.push(cCards[i]);
         }
-        playerQueue.push(cCards[4]);
+        playerQueue.push(cCards[3]);
         playerQueue.push(pCard);
         playerQueue.push(cCard);
     }
